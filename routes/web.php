@@ -19,4 +19,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'products'], function(){
     Route::post('/store', [ProductController::class, 'store'])->name('product.store');
     Route::get('/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('/{id}/update', [ProductController::class, 'update'])->name('product.update');
 });
