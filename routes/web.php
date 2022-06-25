@@ -16,6 +16,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::group(['prefix' => 'product'], function(){
+Route::group(['prefix' => 'products'], function(){
     Route::post('/store', [ProductController::class, 'store'])->name('product.store');
+    Route::get('/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 });

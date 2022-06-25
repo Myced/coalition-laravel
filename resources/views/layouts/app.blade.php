@@ -16,4 +16,7 @@
     <body class="body">
         @yield('content')
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@2"></script>
+    @yield('scripts')
 </html>

@@ -73,9 +73,12 @@ class ProductService
 
         try {
             $this->saveProduct($productRow);
+
         } catch (\Throwable $th) {
             throw $th;
         }
+
+        return $productRow;
     }
 
     private function saveProduct($productRow)
